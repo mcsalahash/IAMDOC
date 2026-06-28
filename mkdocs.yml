@@ -1,0 +1,136 @@
+site_name: IAM Reference — Azure / Entra ID
+site_description: Base de connaissances personnelle — IAM, OAuth2, Entra ID, Sécurité identitaire
+site_author: Salaheddine El Machkoury
+docs_dir: docs
+theme:
+  name: material
+  language: fr
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Mode sombre
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Mode clair
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.indexes
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search:
+      lang: fr
+  - tags
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Accueil: index.md
+
+  - Fondamentaux IAM:
+    - fondamentaux/index.md
+    - Définitions essentielles: fondamentaux/definitions.md
+    - Types d'identités: fondamentaux/identites.md
+    - Architecture Entra ID: fondamentaux/architecture.md
+
+  - OAuth 2.0 & OIDC:
+    - oauth2/index.md
+    - Protocoles fondamentaux: oauth2/protocoles.md
+    - Flows utilisateur: oauth2/flows-utilisateur.md
+    - Flows machine-to-machine: oauth2/flows-m2m.md
+    - Sécurité avancée (JAR, PAR, DPoP): oauth2/securite-avancee.md
+    - Tokens (JWT, opaque, introspection): oauth2/tokens.md
+
+  - Entra ID:
+    - entra-id/index.md
+    - App Registrations: entra-id/app-registrations.md
+    - Conditional Access: entra-id/conditional-access.md
+    - Token Protection (anti-AiTM): entra-id/token-protection.md
+    - CAE — Continuous Access Evaluation: entra-id/cae.md
+    - PIM & Gouvernance des rôles: entra-id/pim.md
+    - Managed Identities: entra-id/managed-identities.md
+    - External Identities (B2B/B2C): entra-id/external-identities.md
+    - Application Proxy: entra-id/app-proxy.md
+    - Identity Secure Score: entra-id/secure-score.md
+
+  - Implémentation MSAL:
+    - implementation/index.md
+    - Arbre de décision: implementation/decision.md
+    - SPA (MSAL.js): implementation/spa.md
+    - Web serveur (MI.Web): implementation/web-server.md
+    - Desktop .NET + WAM: implementation/desktop-wam.md
+    - Mobile (iOS / Android): implementation/mobile.md
+    - Daemon & Managed Identity: implementation/daemon.md
+    - OBO Flow: implementation/obo.md
+
+  - Monitoring & Audit:
+    - monitoring/index.md
+    - Logs Entra ID (SignIn, Audit): monitoring/logs.md
+    - KQL — Requêtes de référence: monitoring/kql.md
+    - Sentinel & Workbooks: monitoring/sentinel.md
+    - Identity Secure Score: monitoring/secure-score.md
+
+  - Identity Governance:
+    - gouvernance/index.md
+    - Entitlement Management: gouvernance/entitlement.md
+    - Access Reviews: gouvernance/access-reviews.md
+    - Lifecycle Workflows: gouvernance/lifecycle.md
+
+  - Roadmap 2026:
+    - roadmap/index.md
+    - Breaking Changes (confirmés): roadmap/breaking-changes-confirmes.md
+    - Breaking Changes (à vérifier): roadmap/breaking-changes-a-verifier.md
+    - Plan d'action: roadmap/plan-action.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/salaheddine-el-machkoury/
+  generator: false
+
+copyright: "Usage personnel — Salaheddine El Machkoury — Mis à jour : 2026"
