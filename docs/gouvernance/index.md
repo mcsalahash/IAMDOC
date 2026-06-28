@@ -1,3 +1,7 @@
-# Gouvernance
+# Identity Governance
 
-> Section en cours de construction — contenu migré progressivement depuis le Dossier IAM v4.
+| Page | Contenu |
+|---|---|
+| [Entitlement Management](entitlement.md) | Access packages, catalogues, workflows d'approbation |
+| [Access Reviews](access-reviews.md) | Revues périodiques, inactivité, délégation |
+| [Lifecycle Workflows](lifecycle.md) | Provisioning/déprovisioning RH-driven |
