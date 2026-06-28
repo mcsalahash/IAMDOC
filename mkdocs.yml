@@ -85,6 +85,7 @@ nav:
     - Flows machine-to-machine: oauth2/flows-m2m.md
     - Sécurité avancée (JAR, PAR, DPoP): oauth2/securite-avancee.md
     - Tokens (JWT, opaque, introspection): oauth2/tokens.md
+    - SAML 2.0: oauth2/saml.md
 
   - Entra ID:
     - entra-id/index.md
